@@ -42,6 +42,17 @@
 
 
 
+//@synthesize myFirstSlider, mySecondSlider;
+
+-(IBAction)myFirstSliderUpdateValuesAction:(UISlider *)slider{
+    [myFirstNumber setText:[NSString stringWithFormat:@"%.0f",[slider value]]];
+}
+
+-(IBAction)mySecondSliderUpdateValuesAction:(UISlider *)slider{
+    [mySecondNumber setText:[NSString stringWithFormat:@"%.0f",[slider value]]];
+}
+
+
 
 
 - (void)didReceiveMemoryWarning

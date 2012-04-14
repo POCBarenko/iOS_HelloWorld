@@ -22,4 +22,8 @@
 - (IBAction)mySumAction:(id)sender;
 
 
+- (IBAction)myFirstSliderUpdateValuesAction:(UISlider *)slider;
+- (IBAction)mySecondSliderUpdateValuesAction:(UISlider *)slider;
+
+
 @end
