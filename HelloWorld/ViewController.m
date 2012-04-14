@@ -10,6 +10,40 @@
 
 @implementation ViewController
 
+
+
+@synthesize myLabel, myTextField;
+
+-(IBAction)myButtonAction:(id)sender
+{
+    NSString *text = [myTextField text];
+    NSString *messageLog = [NSString stringWithFormat:@"valor texto: %@", text];
+    NSLog(@"%@",messageLog);
+    
+    [myLabel setText:text];
+    NSLog(@"Label configurado para: %1$@",text);
+}
+
+
+
+
+@synthesize myFirstNumber, mySecondNumber;
+
+-(IBAction)mySumAction:(id)sender
+{
+    NSInteger firstNumber = [[myFirstNumber text] integerValue];
+    NSInteger secondNumber = [[mySecondNumber text] integerValue];
+    
+    NSInteger result = firstNumber + secondNumber;
+    NSLog(@"Conta: %d + %d = %d", firstNumber, secondNumber, result);
+    
+    [myLabel setText:[NSString stringWithFormat:@"Resultado: %d", result]];
+}
+
+
+
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

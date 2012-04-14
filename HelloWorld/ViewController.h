@@ -10,4 +10,16 @@
 
 @interface ViewController : UIViewController
 
+@property(nonatomic, weak) IBOutlet UITextField *myTextField;
+@property(nonatomic, weak) IBOutlet UILabel *myLabel;
+
+- (IBAction)myButtonAction:(id)sender;
+
+
+@property(nonatomic, weak) IBOutlet UITextField *myFirstNumber;
+@property(nonatomic, weak) IBOutlet UITextField *mySecondNumber;
+
+- (IBAction)mySumAction:(id)sender;
+
+
 @end
