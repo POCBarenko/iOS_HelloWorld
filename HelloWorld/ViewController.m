@@ -31,13 +31,14 @@
 
 -(IBAction)mySumAction:(id)sender
 {
-    NSInteger firstNumber = [[myFirstNumber text] integerValue];
-    NSInteger secondNumber = [[mySecondNumber text] integerValue];
     
-    NSInteger result = firstNumber + secondNumber;
-    NSLog(@"Conta: %d + %d = %d", firstNumber, secondNumber, result);
+    CGFloat firstNumber = [[myFirstNumber text] floatValue];
+    CGFloat secondNumber = [[mySecondNumber text] floatValue];
     
-    [myLabel setText:[NSString stringWithFormat:@"Resultado: %d", result]];
+    CGFloat result = firstNumber + secondNumber;
+    NSLog(@"Conta: %.2f + %.2f = %.2f", firstNumber, secondNumber, result);
+    
+    [myLabel setText:[NSString stringWithFormat:@"Resultado: %.2f", result]];
 }
 
 
@@ -45,11 +46,11 @@
 //@synthesize myFirstSlider, mySecondSlider;
 
 -(IBAction)myFirstSliderUpdateValuesAction:(UISlider *)slider{
-    [myFirstNumber setText:[NSString stringWithFormat:@"%.0f",[slider value]]];
+    [myFirstNumber setText:[NSString stringWithFormat:@"%.2f",[slider value]]];
 }
 
 -(IBAction)mySecondSliderUpdateValuesAction:(UISlider *)slider{
-    [mySecondNumber setText:[NSString stringWithFormat:@"%.0f",[slider value]]];
+    [mySecondNumber setText:[NSString stringWithFormat:@"%.2f",[slider value]]];
 }
 
 
